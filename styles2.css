@@ -1,0 +1,268 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    min-height: 11vh;
+    margin: 0;
+    padding: 0;
+    padding-top: 40px;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: space-around;
+}
+
+h1{
+    font-size: 10vw;
+    color: #fff;
+}
+
+h3{
+    font-size: 4vh;
+    color: #06014e;
+    font-weight: 100;
+}
+
+
+p{
+    color: #fff;
+    justify-content: space-around;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    color: rgb(0, 0, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.navbar a {
+    font-family: 'Montserrat', sans-serif;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #3890e2;
+}
+
+main {
+    flex: 1;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.logo img {
+    width: 120px; /* This will maintain the aspect ratio */
+    max-width: 100%; /* Limit the maximum width */
+    height: auto; /* This will adjust the height accordingly */
+}
+
+.menu {
+    display: flex;
+    gap: 40px;
+}
+
+.menu img{
+    width: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+}
+
+.bar {
+    width: 30px;
+    height: 4px;
+    background-color: rgb(0, 0, 0);
+    margin: 3px 25px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+
+    body, h1, h2, h3, p, ul, li {
+        justify-content: space-between;
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
+
+
+    .menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar.responsive .menu {
+        display: flex;
+        flex-direction: row;
+        background-color: #ffffff;
+        position:absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        padding: 10px;
+    }
+
+    .navbar.responsive .menu a {
+        color: rgb(1, 2, 51);
+        font-size: 1rem;
+        margin: 5px 0;
+    }
+}
+
+
+.page_title{
+    background-color: #2b2b2b;
+    justify-content: space-around;
+    text-align:center;
+    letter-spacing: 15px;
+    padding: 25px;
+}
+
+
+
+/* Style for portfolio section */
+.portfolio {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Display 4 items in a row */
+    gap: 0;
+    padding: 1vw 0;
+    margin: 0 15vw; /* Add margin to create space between cards */
+    max-width: 1100px;
+}
+
+/* Style for portfolio cards */
+.portfolio-card {
+    background-color: #fff;
+    border-radius: 15px; /* Round corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Hide overflow if content exceeds card */
+    text-align: center;
+    padding: 2vw 1vw;
+    margin: 2vw 1vw;
+    max-width: 30vw;
+    min-width: 18vw;
+    height: 50vh;
+    transition: background-color 0.3s;
+    justify-content: space-around;
+}
+
+
+/* Hover effect */
+.portfolio-card:hover {
+    background-color: #bee2ff; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+}
+
+.portfolio-card img {
+    max-width: 10vw;
+}
+
+.portfolio-card h3 {
+    font-size: 18px;
+    margin-top: 5px;
+    padding: 3px; /* Remove any padding */
+}
+
+.portfolio-card p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 0;
+    padding: 0; /* Remove any padding */
+}
+
+/* Style for round button */
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px; /* Make button round */
+    margin-top: 0px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #247c97;
+}
+
+
+
+/* Media query for screens up to 768px (typical tablet size) */
+@media (max-width: 980px) {
+    .portfolio {
+        grid-template-columns: repeat(2, 1fr); /* Display 2 items in a row */
+        gap: 5px;
+        padding: 20px 0;
+        margin: 15px 15px; /* Add margin to create space between cards */
+    }
+
+    .portfolio-card {
+        max-width: 35vw;
+        min-width: 20vw;
+        height: 45vh;  
+        padding: 2vw 1vw;
+        margin: 2vw 1vw;
+    }
+}
+
+/* Media query for screens up to 480px (typical mobile size) */
+@media (max-width: 600px) {
+    .portfolio {
+        grid-template-columns: 1fr; /* Display 1 item in a row */
+        gap: 5px;
+        padding: 20px 0;
+        margin: 0px 80px; /* Add margin to create space between cards */
+    }
+
+    .portfolio-card {
+        max-width: 30vw;
+        min-width: 20vw;
+        height: 40vh;  
+        padding: 15vw;
+        margin: 2vw;
+    }
+
+    .portfolio-card img {
+        max-width: 15vw;
+    }
+}
+

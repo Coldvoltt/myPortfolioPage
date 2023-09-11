@@ -1,0 +1,358 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    min-height: 11vh;
+    margin: 0;
+    padding: 0;
+    padding-top: 40px;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: space-around;
+}
+
+h1{
+    font-size: 10vh;
+    color: #fff;
+}
+
+h3{
+    font-size: 4vh;
+    color: #06014e;
+    font-weight: 100;
+}
+
+
+p{
+    color: #fff;
+    justify-content: space-around;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    color: rgb(0, 0, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.navbar a {
+    font-family: 'Montserrat', sans-serif;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #3890e2;
+}
+
+main {
+    flex: 1;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.logo img {
+    width: 120px; /* This will maintain the aspect ratio */
+    max-width: 100%; /* Limit the maximum width */
+    height: auto; /* This will adjust the height accordingly */
+}
+
+.menu {
+    display: flex;
+    gap: 40px;
+}
+
+.menu img{
+    width: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+}
+
+.bar {
+    width: 30px;
+    height: 4px;
+    background-color: rgb(0, 0, 0);
+    margin: 3px 25px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.introduction {
+    background-color: #6ea4eb;
+    padding: 30px 0;
+    text-align:center;
+    color: #333;
+}
+
+/* Style for pill button */
+.pill-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #090a53;
+    text-decoration: none;
+    border-radius: 50px; /* Makes it a pill shape */
+    transition: background-color 0.3s;
+}
+
+.pill-button:hover {
+    background-color: #b7ebff;
+}
+
+
+.socials {
+    width: 50px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+/* Style for about section */
+.about {
+    background-color: #e6f6ff;
+    padding: 30px 0;
+    text-align: center;
+    color: #333;
+}
+
+/* Style for container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.container2 {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.container2 img{
+    width: 400px;
+    margin: 0;   
+}
+
+.container2 h4{
+    width: 600px;
+    margin: 0;  
+    text-align: justify;
+    text-justify: inter-word; 
+    font-weight:lighter;
+}
+
+/* Style for workflow section */
+.workflow-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 0;
+}
+
+/* Style for workflow items */
+.workflow-item {
+    text-align: center;
+    max-width: 250px;
+    margin-bottom: 20px;
+}
+
+/* Style for workflow icons */
+.workflow-icon img {
+    max-width: 150px;
+}
+
+.workflow-item h3 {
+   font-size: 18px; 
+   margin: 10px 0;
+}
+
+.workflow-item p {
+    font-size: 12px; 
+    color: #333;
+    margin: 10px 0;
+ }
+
+/* Media query for screens up to 768px (typical tablet size) */
+@media (max-width: 768px) {
+    .workflow-section {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* Style for footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Style for footer text */
+footer p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+/* Style for footer link */
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #f0f0f0;
+}
+
+/* Style for blog posts */
+.blog-post {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+/* Style for blog post titles */
+.blog-post h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* Style for excerpt */
+.blog-post .excerpt {
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+/* Style for full content */
+.blog-post .full-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+/* Expand blog content when clicked */
+.blog-post.expanded {
+    max-height: 1000px; /* Adjust as needed */
+}
+
+/* Hover effect for blog posts */
+.blog-post:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+
+    body, h1, h2, h3, p, ul, li {
+        justify-content: space-between;
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
+
+
+    .menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar.responsive .menu {
+        display: flex;
+        flex-direction: row;
+        background-color: #ffffff;
+        position:absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        padding: 10px;
+    }
+
+    .navbar.responsive .menu a {
+        color: rgb(1, 2, 51);
+        font-size: 1rem;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container2 {
+        display: grid;
+        
+    }
+
+    .container2 img{
+        margin: 15px;   
+    }
+    
+    .container2 h4{
+        width: 400px;
+        margin: 0;  
+        text-align: justify;
+        text-justify: inter-word; 
+        font-weight:lighter;
+    }
+}
+
+/* Media query for screens up to 480px (typical mobile size) */
+@media (max-width: 580px) {
+    .grid-section {
+        grid-template-columns: 1fr;
+    }
+
+    .container2 {
+        display: grid;
+        
+    }
+}
