@@ -1,6 +1,5 @@
 /* Reset some default styles */
 body, h1, h2, h3, p, ul, li {
-    min-height: 11vh;
     margin: 0;
     padding: 0;
     padding-top: 40px;
@@ -153,6 +152,14 @@ main {
     padding: 0 20px;
 }
 
+.container p {
+    margin-bottom:3.5vw;
+}
+
+.container h1 {
+    margin-bottom:.5vw;
+}
+
 .container2 {
     display: flex;
     justify-content: space-around;
@@ -178,6 +185,7 @@ main {
 .workflow-section {
     display: flex;
     flex-wrap: wrap;
+    background-color: #ffffff;
     justify-content: center;
     gap: 20px;
     padding: 50px 0;
@@ -197,17 +205,21 @@ main {
 
 .workflow-item h3 {
    font-size: 18px; 
-   margin: 10px 0;
+   margin: 5px;
+   padding: 10px;
 }
 
 .workflow-item p {
-    font-size: 12px; 
+    font-size: 14px; 
     color: #333;
-    margin: 10px 0;
- }
+    margin: 1px;
+    padding: 1px;
+}
+
+ 
 
 /* Media query for screens up to 768px (typical tablet size) */
-@media (max-width: 768px) {
+@media screen and (max-width: 980px) {
     .workflow-section {
         flex-direction: column;
         align-items: center;
@@ -322,7 +334,7 @@ footer a:hover {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 580px) {
     .grid-section {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -346,13 +358,28 @@ footer a:hover {
 }
 
 /* Media query for screens up to 480px (typical mobile size) */
-@media (max-width: 580px) {
+@media (max-width: 480px) {
+
+    h1{
+        font-size: 8vh;
+        color: #fff;
+    }
+
     .grid-section {
         grid-template-columns: 1fr;
     }
 
     .container2 {
-        display: grid;
-        
+        display: grid;   
+    }
+
+    .container2 img{
+        margin: 15px;
+        width: 300px; 
+    }
+
+    .container2 h4{
+        margin: 15px;
+        width: 300px;  
     }
 }
